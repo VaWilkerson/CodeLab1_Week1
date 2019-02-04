@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         InvokeRepeating("Spawn", 1, 2);    //spawns 1 BreadSlice every 2 seconds, repeating 
+        //VCS comment to test update
     }
     
     // Update is called once per frame
@@ -16,7 +17,7 @@ public class Spawner : MonoBehaviour
         
     }
 
-    void Spawn()
+    void Spawn() 
     {
         GameObject newPrize = Instantiate(Resources.Load<GameObject>("Prefabs/BreadSlice"));    //instantiates prefab "BreadSlice"
         newPrize.transform.position = new Vector2(Random.Range(-10, 10), Random.Range(-10, 10));    //spawns the BreadSlice in a random location within a fixed area
